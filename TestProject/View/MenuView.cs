@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using SimpleSong.Controller.MenuManager;
 
 namespace SimpleSong.View
@@ -24,6 +22,7 @@ namespace SimpleSong.View
                     Console.Clear();
                     break;
                 case 3:
+                    new DisplaySong().GetAllSongsList();
                     Console.Clear();
                     break;
                 case 4:

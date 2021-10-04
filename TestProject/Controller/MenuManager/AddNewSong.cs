@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using SimpleSong.Controller.DAO.DAOImpl;
 using SimpleSong.Controller.DAO.DAOInterface;
 using SimpleSong.Model;
