@@ -7,7 +7,7 @@ namespace SimpleSong.Controller.DAO.DAOInterface
     {
         public List<Song> GetAllSongs();
         public void AddSong(Song song);
-        public void DeleteSong(Song song);
+        public void DeleteSong(string songTitle);
         public Song GetSongById(int songId);
     }
 }

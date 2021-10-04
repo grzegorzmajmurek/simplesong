@@ -21,6 +21,21 @@ namespace SimpleSong.Migrations
                 {
                     table.PrimaryKey("PK_Songs", x => x.SongId);
                 });
+
+            migrationBuilder.InsertData(
+                table: "Songs",
+                columns: new[] { "SongId", "AlbumName", "Author", "Length", "Title" },
+                values: new object[] { 1, "Na legalu", "Rychu Peja", 3.2000000000000002, "Jest jedna rzecz" });
+
+            migrationBuilder.InsertData(
+                table: "Songs",
+                columns: new[] { "SongId", "AlbumName", "Author", "Length", "Title" },
+                values: new object[] { 2, "Tabasko", "OSTR", 2.5, "Kochana Polsko" });
+
+            migrationBuilder.InsertData(
+                table: "Songs",
+                columns: new[] { "SongId", "AlbumName", "Author", "Length", "Title" },
+                values: new object[] { 3, "Najwieksze przeboje", "Krzysztof Krawczyk", 3.4500000000000002, "Chcialem Byc" });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

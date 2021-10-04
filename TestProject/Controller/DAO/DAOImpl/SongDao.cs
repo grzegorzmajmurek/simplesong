@@ -9,12 +9,20 @@ namespace SimpleSong.Controller.DAO.DAOImpl
 {
     class SongDao : ISongDao
     {
-        public void DeleteSong(Song song)
+        public void DeleteSong(string songTitle)
         {
             using (var context = new SimpleSongContext())
             {
-                context.Songs.Remove(song);
-                context.SaveChanges();
+                Song song = context.Songs.Where(song => song.Title == songTitle).FirstOrDefault<Song>();
+                try
+                {
+                    context.Songs.Remove(song);
+                    context.SaveChanges();
+                }
+                catch
+                {
+                    Console.WriteLine("Song title doesn't exist in DataBase");
+                }
             }
         }
 

@@ -9,7 +9,7 @@ using TestProject;
 namespace SimpleSong.Migrations
 {
     [DbContext(typeof(SimpleSongContext))]
-    [Migration("20211004103250_InitialCreate")]
+    [Migration("20211004105825_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,6 +42,32 @@ namespace SimpleSong.Migrations
                     b.HasKey("SongId");
 
                     b.ToTable("Songs");
+
+                    b.HasData(
+                        new
+                        {
+                            SongId = 1,
+                            AlbumName = "Na legalu",
+                            Author = "Rychu Peja",
+                            Length = 3.2000000000000002,
+                            Title = "Jest jedna rzecz"
+                        },
+                        new
+                        {
+                            SongId = 2,
+                            AlbumName = "Tabasko",
+                            Author = "OSTR",
+                            Length = 2.5,
+                            Title = "Kochana Polsko"
+                        },
+                        new
+                        {
+                            SongId = 3,
+                            AlbumName = "Najwieksze przeboje",
+                            Author = "Krzysztof Krawczyk",
+                            Length = 3.4500000000000002,
+                            Title = "Chcialem Byc"
+                        });
                 });
 #pragma warning restore 612, 618
         }
