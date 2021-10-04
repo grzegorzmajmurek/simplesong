@@ -2,21 +2,20 @@
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
+using SimpleSong.Model;
 
 namespace TestProject
 {
-    public class BloggingContext : DbContext
+    public class SimpleSongContext : DbContext
     {
-        public DbSet<Blog> Blogs { get; set; }
-        public DbSet<Post> Posts { get; set; }
-
+        public DbSet<Song> Songs { get; set; }
         public string DbPath { get; private set; }
 
-        public BloggingContext()
+        public SimpleSongContext()
         {
             var folder = Environment.SpecialFolder.LocalApplicationData;
             var path = Environment.GetFolderPath(folder);
-            DbPath = $"{path}{System.IO.Path.DirectorySeparatorChar}blogging.db";
+            DbPath = $"{path}{System.IO.Path.DirectorySeparatorChar}simplesong.db";
         }
 
         // The following configures EF to create a Sqlite database file in the
