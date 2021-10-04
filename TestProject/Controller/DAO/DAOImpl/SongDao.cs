@@ -34,11 +34,11 @@ namespace SimpleSong.Controller.DAO.DAOImpl
             }
         }
 
-        public Song GetSongById(int songId)
+        public List<Song> GetSongByAlbumName(string albumName)
         {
             using (var context = new SimpleSongContext())
             {
-                return context.Songs.Where(song => song.SongId == songId).FirstOrDefault<Song>();
+                return context.Songs.Where(song => song.AlbumName == albumName).ToList();
             }
         }
 

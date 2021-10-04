@@ -8,6 +8,7 @@ namespace SimpleSong.View
         public void Display()
         {
             Console.WriteLine("1. Add Song\n2. Delete Song\n3. Display All Songs\n4. Display Specyfic Song");
+            
             int option = Convert.ToInt32(System.Console.ReadLine());
             Console.ReadLine();
 
@@ -26,6 +27,7 @@ namespace SimpleSong.View
                     Console.Clear();
                     break;
                 case 4:
+                    new GetSongByAlbum().ShowSongsByAlbum();
                     Console.Clear();
                     break;
                 default:
