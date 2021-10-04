@@ -33,5 +33,19 @@ namespace SimpleSongTest
             string lengthAsString = "abcd";
             Assert.AreEqual(newSong.IsCorrectLengthFormat(lengthAsString), false);
         }
+
+        [Test]
+        public void IsStringEmpty()
+        {
+            string param = "";
+            Assert.AreEqual(newSong.IsNotEmptyString(param), false);
+        }
+
+        [Test]
+        public void IsStringNotEmpty()
+        {
+            string param = "dsad";
+            Assert.AreEqual(newSong.IsNotEmptyString(param), true);
+        }
     }
 }

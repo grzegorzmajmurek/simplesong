@@ -2,7 +2,6 @@
 using SimpleSong.Controller.DAO.DAOImpl;
 using SimpleSong.Controller.DAO.DAOInterface;
 using SimpleSong.View;
-using System.Linq;
 
 namespace SimpleSong.Controller.MenuManager
 {

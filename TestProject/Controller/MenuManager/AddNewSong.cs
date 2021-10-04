@@ -22,25 +22,25 @@ namespace SimpleSong.Controller.MenuManager
             Song song = new Song();
             Console.WriteLine("Get song title");
             var title = Console.ReadLine();
-            while (IsNotEmptyString(title))
+            while (!IsNotEmptyString(title))
             {
                 Console.WriteLine("You provide wrong format! Try again!");
-                Console.WriteLine("Get song album");
+                Console.WriteLine("Get song title");
                 title = Console.ReadLine();
             }
             song.Title = title;
             Console.WriteLine("Get song author");
             var author = Console.ReadLine();
-            while (IsNotEmptyString(author))
+            while (!IsNotEmptyString(author))
             {
                 Console.WriteLine("You provide wrong format! Try again!");
-                Console.WriteLine("Get song album");
+                Console.WriteLine("Get song author");
                 author = Console.ReadLine();
             }
             song.Author = author;
             Console.WriteLine("Get song album");
             var album = Console.ReadLine();
-            while (IsNotEmptyString(album))
+            while (!IsNotEmptyString(album))
             {
                 Console.WriteLine("You provide wrong format! Try again!");
                 Console.WriteLine("Get song album");
@@ -68,7 +68,7 @@ namespace SimpleSong.Controller.MenuManager
 
         public bool IsNotEmptyString(string param)
         {
-            return String.IsNullOrEmpty(param);
+            return !String.IsNullOrEmpty(param);
         }
     }
 }
