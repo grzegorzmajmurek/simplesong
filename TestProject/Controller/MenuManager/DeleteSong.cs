@@ -1,7 +1,7 @@
-﻿using System;
-using SimpleSong.Controller.DAO.DAOImpl;
+﻿using SimpleSong.Controller.DAO.DAOImpl;
 using SimpleSong.Controller.DAO.DAOInterface;
 using SimpleSong.View;
+using static System.Console;
 
 namespace SimpleSong.Controller.MenuManager
 {
@@ -11,14 +11,14 @@ namespace SimpleSong.Controller.MenuManager
         MenuView menuView = new MenuView();
         public void GoBack()
         {
-            Console.ReadLine();
-            Console.Clear();
+            ReadLine();
+            Clear();
             menuView.Display();
         }
         public void DeleteOneSong()
         {
-            Console.WriteLine("Get song title to delete");
-            var song = Console.ReadLine();
+            WriteLine("Get song title to delete");
+            var song = ReadLine();
             SongDao.DeleteSong(song);
             GoBack();
         }
